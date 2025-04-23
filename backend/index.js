@@ -18,8 +18,8 @@ const DB_NAME = process.env.DB_NAME
 
 /*************middleware*************/
 app.use(cors())
+app.use(express.json())
 /***********************************/
-
 
 
 async function startServer() {
