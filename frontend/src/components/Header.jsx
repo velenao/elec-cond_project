@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router";
+import { Link } from "react-router";
 
 export const Header = () => {
   const location = useLocation();
@@ -7,33 +8,51 @@ export const Header = () => {
   return (
     <React.Fragment>
       <div className="header">
-        <div className="logo"> Header </div>
+        <div className="logo">
+          <Link to={"/"} href="/">
+            Header
+          </Link>
+        </div>
         <ul className="nav">
           <li>
-            <a href="1">о нас</a>
+            <Link to={"#"} href="1">
+              о нас
+            </Link>
           </li>
           <li>
-            <a href="1">услуги</a>
+            <Link to={"#"} href="1">
+              услуги
+            </Link>
           </li>
           <li>
-            <a href="1">контакты</a>
+            <Link to={"#"} href="1">
+              контакты
+            </Link>
           </li>
           <li>
-            <a href="1">работы</a>
+            <Link to={"#"} href="1">
+              работы
+            </Link>
           </li>
           <li>
-            <a href="1">прайс</a>
+            <Link to={"#"} href="1">
+              прайс
+            </Link>
           </li>
           {location.pathname === "/electric" && (
             <div>
               <li>
-                <a href="1">эл</a>
+                <Link to={"/conditioners"} href="/conditioners">
+                  конд
+                </Link>
               </li>
             </div>
           )}
           {location.pathname === "/conditioners" && (
             <li>
-              <a href="1">конд</a>
+              <Link to={"/electric"}>
+                эл
+              </Link>
             </li>
           )}
         </ul>

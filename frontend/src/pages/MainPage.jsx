@@ -1,7 +1,19 @@
-import React from 'react'
+import React from "react";
 
 export const MainPage = () => {
   return (
-    <div>MainPage</div>
-  )
-}
+    <React.Fragment>
+      <div>MainPage</div>
+      <div>
+        <button type="button">
+          <a href="/electric">Электрика</a>
+        </button>
+      </div>
+      <div>
+        <button type="button">
+          <a href="/conditioners">Кондиционеры</a>
+        </button>
+      </div>
+    </React.Fragment>
+  );
+};
