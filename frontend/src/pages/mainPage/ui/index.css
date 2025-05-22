@@ -1,0 +1,50 @@
+.link {
+    border: none;
+    filter: blur(5px);
+    width: 35vw;
+    height: 33vw;
+}
+
+.link:hover {
+    filter: none;
+}
+
+.main_video {
+  width: 35vw;
+  height: 33vw;
+  object-fit: cover;
+}
+
+.main_page {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+.main_title {
+  margin-top: 6vh;
+  text-align: center;
+  font-size: 3vw;
+  width: 55vw;
+}
+
+
+
+.main_link {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 8vh;
+  width: 95vw;
+  height: 80vh;
+}
+
+.link_electric {
+  /* background-image: url("elec.jpg"); */
+}
+
+.link_conditioners {
+  /* background-image: url("cond.png"); */
+}
+
