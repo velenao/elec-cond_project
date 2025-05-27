@@ -1,50 +1,56 @@
 .link {
-    border: none;
-    filter: blur(5px);
-    width: 35vw;
-    height: 33vw;
+  display: block;
+  position: relative;
 }
 
-.link:hover {
-    filter: none;
+.link:hover .img_video{
+    opacity: 0;
 }
+
+.main_link {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 7vh;
+  gap: 10vw;
+}
+
+.img_video {
+  position:absolute;
+  right: 0;
+  z-index: 1;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  transition: opacity 0.5s ease-in-out;
+  pointer-events: none; 
+}
+
 
 .main_video {
-  width: 35vw;
-  height: 33vw;
+  border-radius: 10px;
+  width: 30vw;
+  height: 35vw;
   object-fit: cover;
 }
 
 .main_page {
+  min-height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
+  background-color: 	#000033;
+  color: white;
 }
 
 
 
 .main_title {
+  border-left: white 2px solid;
+  border-right: white 2px solid;;
   margin-top: 6vh;
   text-align: center;
-  font-size: 3vw;
-  width: 55vw;
+  font-size: 2.5vw;
+  width: 70vw;
 }
 
-
-
-.main_link {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 8vh;
-  width: 95vw;
-  height: 80vh;
-}
-
-.link_electric {
-  /* background-image: url("elec.jpg"); */
-}
-
-.link_conditioners {
-  /* background-image: url("cond.png"); */
-}
 
