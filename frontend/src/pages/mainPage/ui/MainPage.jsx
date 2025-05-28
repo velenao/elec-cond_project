@@ -3,9 +3,6 @@ import './index.css'
 import usePlayVideo from './playVideo'
 import videoCond from '../../../assets/conditionersAssets/condVideo/cond.mp4'
 // import videoElec from './'
-import elecImg from '../../../assets/electricAssets/elecImg/elec.jpg'
-import condImg from '../../../assets/conditionersAssets/condImg/cond.png'
-
 
 
 export const MainPage = () => {
@@ -22,11 +19,9 @@ export const MainPage = () => {
         <div className="main_link">
             <a className="link" href="/electric">
               <video className="main_video" id="video_electric" ref={vidRefElec} loop muted></video>
-              <img src={elecImg} alt="элетрика" className="img_video"/>
             </a>
             <a className="link" href="/conditioners">
               <video className="main_video" id="video_conditioners" ref={vidRefCond} src={videoCond} loop muted></video>
-              <img src={condImg} alt="кондиционеры" className="img_video"/>
             </a>
         </div>
       </div>

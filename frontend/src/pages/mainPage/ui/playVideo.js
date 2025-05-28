@@ -1,14 +1,16 @@
-import { useEffect} from "react";
+import { useEffect } from "react";
 
 export default function usePlayVideo(ref) {
   useEffect(() => {
-    
-    ref.current.addEventListener('mouseenter', () => ref.current.play());
-    ref.current.addEventListener('mouseleave', () => ref.current.pause());
+    ref.current.addEventListener("mouseenter", () => ref.current.play());
+    ref.current.addEventListener("mouseleave", () => {
+      ref.current.pause();
+      ref.current.currentTime = 0;
+    });
 
     return () => {
-      ref.removeEventListener('mouseenter', () => {});
-      ref.removeEventListener('mouseleave', () => {});
+      ref.removeEventListener("mouseenter", () => {});
+      ref.removeEventListener("mouseleave", () => {});
     };
   }, [ref]);
 
