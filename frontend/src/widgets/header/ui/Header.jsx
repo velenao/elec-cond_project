@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router";
 import { Link } from "react-router";
+import './style.css'
 
 const headerData = {
   firstItem: { text: "главная", link: "/" },
@@ -22,12 +23,14 @@ export const Header = () => {
   const currentPath = location.pathname;
 
   return (
-    <header className="header">
+    <>
+    <div className="header">
       <div className="logo">
-        <Link to={headerData.firstItem.link}>{headerData.firstItem.text}</Link>
+        <h1>+7-999-084-14-03</h1>
       </div>
       <nav className="nav">
         <ul>
+        <Link to={headerData.firstItem.link}>{headerData.firstItem.text}</Link>
           {headerData.mainItems.map((item, index) => (
             <li key={index}>
               <Link
@@ -41,15 +44,23 @@ export const Header = () => {
               </Link>
             </li>
           ))}
-          {(currentPath === "/electric" || currentPath === "/conditioners") && (
+          {(currentPath === "/electric") && (
             <li>
-              <Link to={currentPath === "/electric" ? headerData.lastItem[1].link : headerData.lastItem[0].link}>
-              {currentPath === "/electric" ? headerData.lastItem[1].text : headerData.lastItem[0].text}
+              <Link to={headerData.lastItem[1].link}>
+              {headerData.lastItem[1].text}
+              </Link>
+            </li>
+          )}
+            {(currentPath === "/conditioners") && (
+            <li>
+              <Link to={headerData.lastItem[0].link}>
+              {headerData.lastItem[0].text}
               </Link>
             </li>
           )}
         </ul>
       </nav>
-    </header>
+    </div>
+    </>
   );
 };

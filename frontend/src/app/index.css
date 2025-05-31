@@ -8,32 +8,13 @@
 .container {
     min-height: 100vh;
     background-color: #DDEEFF;
-}
-
-/*.header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    max-width: 95%;
     margin: 0 auto;
-    padding-top: 5px;
-    background-color: #1c6bf2;
-    box-shadow: 11px 2px 8px 20px #1c6bf2;
 }
 
-.logo {
-    max-width: 30%;
+.contentContainer {
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 85vw;
+margin: 0 auto;
 }
-
-.nav {
-    max-width: 60%;
-    display: flex;
-    gap: 27px;
-}
-
-
-.footer {
-    max-width: 95%;
-    border: 1px solid black;
-    margin: 0 auto;
-} */

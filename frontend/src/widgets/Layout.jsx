@@ -1,27 +1,29 @@
 import React from "react";
 import { useLocation } from "react-router";
 
-import { Header } from "./Header";
+import { Header } from "./header";
 import { Footer } from "./Footer";
 
-const offHeaderFooter = (path) => path !== "/";
 
 export const Layout = ({ children }) => {
   const location = useLocation();
+  const currentPath = location.pathname
 
   return (
-    <React.Fragment>
+    <>
       <div className="container">
-        {offHeaderFooter(location.pathname) && (
-          <div>
+        {(currentPath !== '/') && (
+          <>
             <Header />
+            <div className="contentContainer">
             {children}
+            </div>
             <Footer />
-          </div>
+          </>
         )}
-        {!offHeaderFooter(location.pathname) && children}
+        {(currentPath === '/') && children}
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

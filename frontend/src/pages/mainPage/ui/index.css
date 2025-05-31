@@ -3,8 +3,8 @@
   position: relative;
 }
 
-.link:hover .img_video{
-    opacity: 0;
+.link:hover .img_video {
+  opacity: 0;
 }
 
 .main_link {
@@ -15,16 +15,15 @@
 }
 
 .img_video {
-  position:absolute;
+  position: absolute;
   right: 0;
   z-index: 1;
   object-fit: cover;
   height: 100%;
   width: 100%;
   transition: opacity 0.5s ease-in-out;
-  pointer-events: none; 
+  pointer-events: none;
 }
-
 
 .main_video {
   border-radius: 10px;
@@ -38,19 +37,15 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: 	#000033;
+  background-color: #000033;
   color: white;
 }
 
-
-
 .main_title {
   border-left: white 2px solid;
-  border-right: white 2px solid;;
+  border-right: white 2px solid;
   margin-top: 6vh;
   text-align: center;
   font-size: 2.5vw;
   width: 70vw;
 }
-
-
