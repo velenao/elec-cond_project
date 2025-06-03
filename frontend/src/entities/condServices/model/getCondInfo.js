@@ -1,20 +1,19 @@
 import { useEffect, useState } from "react";
 import axios from "utils/axios";
 
-export const useGetElectricInfo = () => {
+export const useGetCondInfo = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("/electric");
-        setData(response.data);
+        const resp = await axios.get("/conditioners");
+        setData(resp.data);
       } catch (error) {
         console.error(error);
       }
     };
     fetchData();
   }, []);
-
   return data;
 };

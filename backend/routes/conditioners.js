@@ -1,9 +1,8 @@
 import { Router } from "express";
-import { getCondInfo } from "../controllers/conditioners.js"
+import { getCondInfo } from "../controllers/conditioners.js";
 
-const router = new Router()
+const router = new Router();
 
-router.get('/', getCondInfo)
+router.get("/", getCondInfo);
 
-export default router
-
+export default router;

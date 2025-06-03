@@ -1,22 +1,17 @@
 import React from "react";
-import './style.css'
-import {useLocation} from 'react-router'
+import "./style.css";
+import { useLocation } from "react-router";
 
-import socket from '../../../assets/electricAssets/elecImg/socket.jpg'
-import cond from '../../../assets/conditionersAssets/condImg/cond.jpg'
+import socket from "assets/electricAssets/elecImg/socket.jpg";
+import cond from "assets/conditionersAssets/condImg/cond.jpg";
 
 export const HeaderImg = () => {
-const location = useLocation()
-const currentLocation = location.pathname
+  const location = useLocation();
 
-return (
+  return (
     <div className="headerImg">
-    {(currentLocation === '/electric') && (
-          <img src={socket} alt="" />
-    )}
-    {(currentLocation === '/conditioners') && (
-          <img src={cond} alt="" />
-    )}
+      {location.pathname === "/electric" && <img src={socket} alt="" />}
+      {location.pathname === "/conditioners" && <img src={cond} alt="" />}
     </div>
-)
-}
+  );
+};

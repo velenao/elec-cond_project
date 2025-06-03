@@ -1,20 +1,19 @@
- * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-
 .container {
-    min-height: 100vh;
-    background-color: #DDEEFF;
-    margin: 0 auto;
+  min-height: 100vh;
+  background-color: #ddeeff;
+  margin: 0 auto;
 }
 
 .contentContainer {
-display: flex;
-flex-direction: column;
-align-items: center;
-width: 85vw;
-margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 85vw;
+  margin: 0 auto;
 }

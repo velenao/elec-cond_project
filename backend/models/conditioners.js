@@ -2,8 +2,9 @@ import mongoose from "mongoose";
 
 const condInfoSchema = new mongoose.Schema(
   {
+    title: { type: String, required: true },
     description: { type: String, required: true },
-    services: [
+    subServices: [
       {
         title: String,
         price: Number,

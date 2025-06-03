@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router";
 
-import { Layout } from "../widgets/Layout.jsx";
-import { MainPage } from "../pages/mainPage";
-import { ElectricPage } from "../pages/electricPage";
-import { ConditionersPage } from "../pages/conditionersPage";
+import { Layout } from "widgets/Layout.jsx";
+import { MainPage } from "pages/mainPage";
+import { ElectricPage } from "pages/electricPage";
+import { ConditionersPage } from "pages/conditionersPage";
 
 function App() {
   return (

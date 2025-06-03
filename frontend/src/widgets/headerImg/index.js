@@ -1,1 +1,1 @@
-export {HeaderImg} from './ui/HeaderImg'
+export { HeaderImg } from "./ui/HeaderImg";

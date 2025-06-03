@@ -1,10 +1,8 @@
 import { Router } from "express";
-import { getElectricInfo } from "../controllers/electric.js"
+import { getElectricInfo } from "../controllers/electric.js";
 
-const router = new Router()
+const router = new Router();
 
-router.get('/', getElectricInfo)
+router.get("/", getElectricInfo);
 
-export default router
-
-
+export default router;

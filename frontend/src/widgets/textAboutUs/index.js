@@ -1,1 +1,1 @@
-export {TextAboutUs} from './ui/TextAboutUs'
+export { TextAboutUs } from "./ui/TextAboutUs";
