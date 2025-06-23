@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 
 import electricRouter from "./routes/electric.js";
-import condRouter from "./routes/conditioners.js";
+import condRouter from "./routes/conditionersRoutes/conditioners.js";
 
 dotenv.config();
 
