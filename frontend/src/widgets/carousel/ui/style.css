@@ -1,5 +1,6 @@
 .carousel-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -7,71 +8,71 @@
   padding: 5vw;
 }
 
-.carousel-images {
-  display: flex;
-  width: 80vw;
+.embla {
+  overflow: hidden;
+  max-width: 100%;
+  margin: 0 auto;
   height: 50vh;
-  position: relative;
+  --slide-spacing: 1.5rem;
 }
 
-.carousel-item {
-  position: relative;
-  width: 33%;
+.embla__viewport {
+  overflow: hidden;
   height: 100%;
-  transition: all 0.5s ease-in-out;
-  z-index: 1;
-  margin: 15px;
 }
 
-.carousel-item img {
-  object-fit: cover;
+.embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  height: 100%;
+  margin-left: calc(var(--slide-spacing) * -1);
+}
+
+.embla__slide {
+  flex: 0 0 55%;
+  min-width: 0;
+  height: 100%;
+  padding-left: var(--slide-spacing);
+}
+
+.embla__slide__image {
   width: 100%;
   height: 100%;
+  object-fit: cover;
   border-radius: 10px;
 }
 
-.carousel-item.center {
-  width: 33%;
-  transform: scale(1.1);
-  z-index: 2;
-}
-
-.carousel-item.prev,
-.carousel-item.next {
-  z-index: 1;
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0.5em;
+  gap: 5em;
 }
 
 .carousel-button {
   background-color: transparent;
-  font-size: 2em;
+  font-size: 3.5em;
   cursor: pointer;
   border: none;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  user-select: none;
-  z-index: 2;
+  padding: 0.5rem;
+  color: black;
+  outline: none;
+  transition: transform 0.2s ease;
 }
 
 .carousel-left::before {
   content: "\2190";
-  color: black;
 }
 
 .carousel-right::before {
   content: "\2192";
-  color: black;
 }
 
-.carousel-button:focus,
-.carousel-button:hover {
-  font-size: 3em;
+.carousel-left:hover {
+  transform: translateX(-0.5rem);
 }
 
-.carousel-left {
-  left: 0;
-}
-
-.carousel-right {
-  right: 0;
+.carousel-right:hover {
+  transform: translateX(0.5rem);
 }

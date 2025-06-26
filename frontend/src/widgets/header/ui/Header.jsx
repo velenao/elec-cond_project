@@ -2,21 +2,7 @@ import React from "react";
 import { useLocation } from "react-router";
 import { Link } from "react-router";
 import "./style.css";
-
-const headerData = {
-  firstItem: { text: "главная", link: "/" },
-  mainItems: [
-    { text: "о нас", linkElectric: "/", linkConditioners: "/" },
-    { text: "услуги", linkElectric: "/", linkConditioners: "/" },
-    { text: "контакты", linkElectric: "/", linkConditioners: "/" },
-    { text: "работы", linkElectric: "/", linkConditioners: "/" },
-    { text: "прайс", linkElectric: "/", linkConditioners: "/" },
-  ],
-  lastItem: [
-    { text: "электрика", link: "/electric" },
-    { text: "кондиционеры", link: "/conditioners" },
-  ],
-};
+import { headerLink } from "../data/headerLink";
 
 export const Header = () => {
   const location = useLocation();
@@ -30,10 +16,10 @@ export const Header = () => {
         </div>
         <nav className="nav">
           <ul>
-            <Link to={headerData.firstItem.link}>
-              {headerData.firstItem.text}
+            <Link to={headerLink.firstItem.link}>
+              {headerLink.firstItem.text}
             </Link>
-            {headerData.mainItems.map((item, index) => (
+            {headerLink.mainItems.map((item, index) => (
               <li key={index}>
                 <Link
                   to={
@@ -48,15 +34,15 @@ export const Header = () => {
             ))}
             {currentPath === "/electric" && (
               <li>
-                <Link to={headerData.lastItem[1].link}>
-                  {headerData.lastItem[1].text}
+                <Link to={headerLink.lastItem[1].link}>
+                  {headerLink.lastItem[1].text}
                 </Link>
               </li>
             )}
             {currentPath === "/conditioners" && (
               <li>
-                <Link to={headerData.lastItem[0].link}>
-                  {headerData.lastItem[0].text}
+                <Link to={headerLink.lastItem[0].link}>
+                  {headerLink.lastItem[0].text}
                 </Link>
               </li>
             )}

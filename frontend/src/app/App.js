@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router";
 
-import { Layout } from "widgets/Layout.jsx";
+import { Layout } from "widgets/Layout";
 import { MainPage } from "pages/mainPage";
 import { ElectricPage } from "pages/electricPage";
 import { ConditionersPage } from "pages/conditionersPage/condPage";

@@ -1,9 +1,9 @@
 import React from "react";
 import img from "assets/conditionersAssets/condImg/cond.jpg";
-import { useGetCondTypes } from "../model/getTypesService";
+import { useCondTypes } from "../helpers/condTypes";
 
 export const CondTypes = () => {
-  const type = useGetCondTypes();
+  const type = useCondTypes();
 
   if (!type) {
     return <div>Загрузка...</div>;
