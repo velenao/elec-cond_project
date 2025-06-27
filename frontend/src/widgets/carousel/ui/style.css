@@ -1,19 +1,19 @@
 .carousel-container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
   overflow: hidden;
-  padding: 5vw;
+  padding-top: 5vh;
+  width: 100%;
 }
 
 .embla {
   overflow: hidden;
   max-width: 100%;
   margin: 0 auto;
-  height: 50vh;
-  --slide-spacing: 1.5rem;
+  height: 70vh;
+  --slide-spacing: 1.2vw;
 }
 
 .embla__viewport {
@@ -29,7 +29,7 @@
 }
 
 .embla__slide {
-  flex: 0 0 55%;
+  flex: 0 0 60%;
   min-width: 0;
   height: 100%;
   padding-left: var(--slide-spacing);
@@ -42,37 +42,51 @@
   border-radius: 10px;
 }
 
-.carousel-controls {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin-top: 0.5em;
-  gap: 5em;
+.active img {
+  transform: scale(0.99);
+  z-index: 10;
+  transition: all 1s ease-in-out;
+}
+
+.inactive img {
+  opacity: 0.5;
+  transform: scale(0.95);
+  transition: all 1s ease-in-out;
 }
 
 .carousel-button {
   background-color: transparent;
-  font-size: 3.5em;
+  font-size: 4em;
   cursor: pointer;
   border: none;
-  padding: 0.5rem;
   color: black;
-  outline: none;
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease;
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  transform: translateY(-50%);
 }
 
 .carousel-left::before {
-  content: "\2190";
+  content: "\276E";
+}
+
+.carousel-left {
+  left: 0.5vw;
 }
 
 .carousel-right::before {
-  content: "\2192";
+  content: "\276F";
+}
+
+.carousel-right {
+  right: 0.5vw;
 }
 
 .carousel-left:hover {
-  transform: translateX(-0.5rem);
+  transform: translateX(-0.4rem) translateY(-50%);
 }
 
 .carousel-right:hover {
-  transform: translateX(0.5rem);
+  transform: translateX(0.4rem) translateY(-50%);
 }

@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { usePrevNextButtons } from "./CarouselNavigation";
@@ -25,6 +25,24 @@ export const Carousel = () => {
     onNextButtonClick,
   } = usePrevNextButtons(emblaApi, onNavButtonClick);
 
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    const selectHandler = () => {
+      const selectedIndex = emblaApi.selectedScrollSnap();
+
+      const slides = document.querySelectorAll(".embla__slide");
+
+      slides.forEach((slide, index) => {
+        slide.classList.toggle("active", index === selectedIndex);
+        slide.classList.toggle("inactive", index !== selectedIndex);
+      });
+    };
+
+    emblaApi.on("select", selectHandler);
+    selectHandler();
+  }, [emblaApi]);
+
   return (
     <div className="carousel-container">
       <div className="embla">
@@ -39,20 +57,18 @@ export const Carousel = () => {
         </div>
       </div>
 
-      <div className="carousel-controls">
-        <button
-          className="carousel-button carousel-left"
-          type="button"
-          onClick={onPrevButtonClick}
-          disabled={prevBtnDisabled}
-        ></button>
-        <button
-          className="carousel-button carousel-right"
-          type="button"
-          onClick={onNextButtonClick}
-          disabled={nextBtnDisabled}
-        ></button>
-      </div>
+      <button
+        className="carousel-button carousel-left"
+        type="button"
+        onClick={onPrevButtonClick}
+        disabled={prevBtnDisabled}
+      ></button>
+      <button
+        className="carousel-button carousel-right"
+        type="button"
+        onClick={onNextButtonClick}
+        disabled={nextBtnDisabled}
+      ></button>
     </div>
   );
 };
