@@ -8,11 +8,6 @@ export const CondTypes = () => {
   if (!type) {
     return <div>Загрузка...</div>;
   }
-
-  if (!type.types || type.types.length === 0) {
-    return <div>Нет типов услуг.</div>;
-  }
-
   return (
     <>
       <div>

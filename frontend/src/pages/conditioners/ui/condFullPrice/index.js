@@ -1,0 +1,1 @@
+export { ConditionersFullPrice } from "./CondFullPrice";

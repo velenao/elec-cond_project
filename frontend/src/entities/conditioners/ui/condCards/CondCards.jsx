@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import img from "assets/conditionersAssets/condImg/cond.jpg";
-import { useCondCards } from "../../helpers/helpers";
+import { useCondServices } from "../../helpers/helpers";
 
 export const CondCards = () => {
-  const card = useCondCards();
+  const card = useCondServices();
 
   if (!card) {
     return <div>Загрузка...</div>;

@@ -2,7 +2,7 @@ import condServices from "@/models/conditionersModels/condServices.js";
 
 export const getCondServices = async (req, res) => {
   try {
-    const data = await condServices.find();
+    const data = await condServices.find().populate("types");
     if (!data) {
       return res.status(404).json({ error: "нет данных" });
     }

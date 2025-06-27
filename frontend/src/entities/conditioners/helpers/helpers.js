@@ -2,14 +2,14 @@ import { useEffect, useState } from "react";
 import { getCondServices, getCondTypes } from "../api/requests";
 import { useParams } from "react-router-dom";
 
-export const useCondCards = () => {
-  const [card, setCard] = useState(null);
+export const useCondServices = () => {
+  const [services, setServices] = useState(null);
 
   useEffect(() => {
-    getCondServices().then((services) => setCard(services));
+    getCondServices().then((services) => setServices(services));
   }, []);
 
-  return card;
+  return services;
 };
 
 export const useCondTypes = () => {
