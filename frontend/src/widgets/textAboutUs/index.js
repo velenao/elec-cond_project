@@ -1,1 +1,0 @@
-export { TextAboutUs } from "./ui/TextAboutUs";

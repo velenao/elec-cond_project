@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router";
 
-import { Layout } from "widgets/Layout";
-import { MainPage } from "pages/mainPage";
+import { Layout } from "app/Layout";
+import { MainPage } from "pages/mainPage/ui";
 import { ElectricPage } from "pages/electricPage";
-import { ConditionersPage } from "pages/conditionersPage/condPage";
-import { ConditionersPageCard } from "pages/conditionersPage/condCardPage";
+import { ConditionersPage } from "pages/conditioners/ui/condPage";
+import { ConditionersPageCard } from "pages/conditioners/ui/condCardPage";
 
 function App() {
   return (

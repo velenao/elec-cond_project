@@ -1,14 +1,14 @@
 import React from "react";
 import { useGetElectricInfo } from "../model/getElectricInfo";
 import "./style.css";
-import { HeaderImg } from "widgets/headerImg";
-import { TextAboutUs } from "widgets/textAboutUs/ui/TextAboutUs";
+import { ImgHeader } from "widgets/ui/imgHeader";
+import { TextAboutUs } from "widgets/ui/textAboutUs";
 
 export const ElectricPage = () => {
   const data = useGetElectricInfo();
   return (
     <>
-      <HeaderImg />
+      <ImgHeader />
       <TextAboutUs />
       <div>
         {data.map((i) => (
