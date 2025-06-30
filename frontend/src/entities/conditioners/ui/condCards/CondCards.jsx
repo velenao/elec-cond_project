@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import img from "assets/conditionersAssets/condImg/cond.jpg";
-import { useCondServices } from "../../helpers/helpers";
+import img from "assets/conditioners/condImg/cond.jpg";
+import { useCondServices } from "../../helpers/CondHelpers";
 
 export const CondCards = () => {
   const card = useCondServices();

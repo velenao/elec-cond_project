@@ -1,8 +1,8 @@
 import React from "react";
 import { useGetElectricInfo } from "../model/getElectricInfo";
 import "./style.css";
-import { ImgHeader } from "widgets/ui/imgHeader";
-import { TextAboutUs } from "widgets/ui/textAboutUs";
+import { ImgHeader } from "widgets/global/ui/imgHeader";
+import { TextAboutUs } from "widgets/global/ui/textAboutUs";
 
 export const ElectricPage = () => {
   const data = useGetElectricInfo();

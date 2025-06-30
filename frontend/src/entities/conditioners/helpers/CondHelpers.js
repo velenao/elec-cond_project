@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getCondServices, getCondTypes } from "../api/requests";
+import { getCondServices, getCondTypes } from "../api/CondRequests";
 import { useParams } from "react-router-dom";
 
 export const useCondServices = () => {

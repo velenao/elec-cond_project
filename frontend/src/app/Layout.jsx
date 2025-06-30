@@ -1,8 +1,8 @@
 import React from "react";
 import { useLocation } from "react-router";
 
-import { Header } from "../widgets/ui/header";
-import { Footer } from "../widgets/Footer";
+import { Header } from "../widgets/global/ui/header";
+import { Footer } from "../widgets/global/ui/footer/Footer";
 
 export const Layout = ({ children }) => {
   const location = useLocation();
@@ -15,7 +15,7 @@ export const Layout = ({ children }) => {
           <>
             <Header />
             <div className="contentContainer">{children}</div>
-            <Footer />
+            {currentPath !== "/conditioners" && <Footer />}
           </>
         )}
         {currentPath === "/" && children}

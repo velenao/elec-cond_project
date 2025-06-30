@@ -1,6 +1,6 @@
 import React from "react";
-import img from "assets/conditionersAssets/condImg/cond.jpg";
-import { useCondTypes } from "../../helpers/helpers";
+import img from "assets/conditioners/condImg/cond.jpg";
+import { useCondTypes } from "../../helpers/CondHelpers";
 
 export const CondTypes = () => {
   const type = useCondTypes();

@@ -1,10 +1,11 @@
 import React from "react";
 import "./style.css";
-import { ImgHeader } from "widgets/ui/imgHeader";
-import { TextAboutUs } from "widgets/ui/textAboutUs";
+import { ImgHeader } from "widgets/global/ui/imgHeader";
+import { TextAboutUs } from "widgets/global/ui/textAboutUs";
 import { CondCards } from "entities/conditioners/ui/condCards";
-import { Carousel } from "entities/conditioners/ui/carousel";
-import { FullPrice } from "entities/conditioners/ui/fullPrice";
+import { CondCarousel } from "widgets/conditioners/ui/condCarousel";
+import { CondFullPrice } from "entities/conditioners/ui/condFullPrice";
+import { Contacts } from "widgets/global/ui/contacts/Contacts";
 
 export const ConditionersPage = () => {
   return (
@@ -12,8 +13,9 @@ export const ConditionersPage = () => {
       <ImgHeader />
       <TextAboutUs />
       <CondCards />
-      <Carousel />
-      <FullPrice />
+      <CondCarousel />
+      <CondFullPrice />
+      <Contacts />
     </>
   );
 };

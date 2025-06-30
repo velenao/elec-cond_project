@@ -2,10 +2,9 @@ import React, { useCallback, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { usePrevNextButtons } from "./CarouselNavigation";
-import { imagesCarousel } from "../../data/imagesCarousel";
 import "./style.css";
 
-export const Carousel = () => {
+export const Carousel = ({ imgCarousel }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay()]);
 
   const onNavButtonClick = useCallback((emblaApi) => {
@@ -48,7 +47,7 @@ export const Carousel = () => {
       <div className="embla">
         <div className="embla__viewport" ref={emblaRef}>
           <div className="embla__container">
-            {imagesCarousel.map(({ src, alt }) => (
+            {imgCarousel.map(({ src, alt }) => (
               <div className="embla__slide" key={alt}>
                 <img src={src} alt={alt} className="embla__slide__image" />
               </div>

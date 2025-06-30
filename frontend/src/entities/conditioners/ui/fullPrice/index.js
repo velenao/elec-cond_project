@@ -1,1 +1,0 @@
-export { FullPrice } from "./FullPrice";

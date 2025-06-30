@@ -10,8 +10,6 @@ export const TextAboutUs = () => {
     <div className="textAboutUs">
       {currentLocation === "/electric" && (
         <>
-          <h3>Немного о нас</h3>
-
           <h4>Занимаемся электромонтажными работами уже более 8 лет</h4>
 
           <p>
@@ -25,8 +23,6 @@ export const TextAboutUs = () => {
       )}
       {currentLocation === "/conditioners" && (
         <>
-          <h3>Немного о нас</h3>
-
           <h4>
             Занимаемся установкой и обслуживанием кондиционеров уже более 6 лет
           </h4>

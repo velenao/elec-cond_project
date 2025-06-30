@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router";
 
 import { Layout } from "app/Layout";
-import { MainPage } from "pages/mainPage/ui";
+import { MainPage } from "pages/main/ui";
 import { ElectricPage } from "pages/electricPage";
 import { ConditionersPage } from "pages/conditioners/ui/condPage";
 import { ConditionersPageCard } from "pages/conditioners/ui/condCardPage";

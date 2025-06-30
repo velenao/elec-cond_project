@@ -1,9 +1,11 @@
-import { useCondServices } from "entities/conditioners/helpers/helpers";
+import { useCondServices } from "entities/conditioners/helpers/CondHelpers";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
-export const FullPrice = () => {
+export const CondFullPrice = () => {
   const servicesData = useCondServices();
+  const location = useLocation();
+  const currentPath = location.pathname;
 
   if (!servicesData) {
     return <div>Загрузка...</div>;
@@ -30,7 +32,9 @@ export const FullPrice = () => {
           </tbody>
         ))}
       </table>
-      <Link to={"/conditioners/price"}>посмотреть весь прайс-лист</Link>
+      {currentPath === "/conditioners" && (
+        <Link to={"/conditioners/price"}>посмотреть весь прайс</Link>
+      )}
     </div>
   );
 };
