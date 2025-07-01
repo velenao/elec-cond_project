@@ -10,10 +10,33 @@
   margin: 0 auto;
 }
 
+.contentContainer > * {
+  margin: 3vh 0;
+}
+
 .contentContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 85vw;
+  width: 90vw;
   margin: 0 auto;
+}
+
+.header,
+.footer {
+  background-color: #000033;
+  color: white;
+  font-size: 0.8rem;
+}
+
+.header a,
+.footer a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.header ul,
+.footer ul {
+  list-style: none;
 }

@@ -1,4 +1,4 @@
-export const headerLink = {
+export const globalLinks = {
   firstItem: { text: "главная", link: "/" },
   mainItems: [
     { text: "о нас", linkElectric: "/", linkConditioners: "/" },
