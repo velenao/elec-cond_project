@@ -15,7 +15,9 @@ export const Layout = ({ children }) => {
           <>
             <Header />
             <div className="contentContainer">{children}</div>
-            {currentPath !== "/conditioners" && <Footer />}
+            {currentPath !== "/conditioners" && currentPath !== "/electric" && (
+              <Footer />
+            )}
           </>
         )}
         {currentPath === "/" && children}

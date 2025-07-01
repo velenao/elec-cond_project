@@ -4,6 +4,7 @@ import "./style.css";
 export const Contacts = () => {
   return (
     <>
+      <h2>Контакты</h2>
       <div className="contacts">
         <div>
           <div>

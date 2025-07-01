@@ -43,31 +43,34 @@ export const Carousel = ({ imgCarousel }) => {
   }, [emblaApi]);
 
   return (
-    <div className="carousel-container">
-      <div className="embla">
-        <div className="embla__viewport" ref={emblaRef}>
-          <div className="embla__container">
-            {imgCarousel.map(({ src, alt }) => (
-              <div className="embla__slide" key={alt}>
-                <img src={src} alt={alt} className="embla__slide__image" />
-              </div>
-            ))}
+    <>
+      <h2>Работы</h2>
+      <div className="carousel-container">
+        <div className="embla">
+          <div className="embla__viewport" ref={emblaRef}>
+            <div className="embla__container">
+              {imgCarousel.map(({ src, alt }) => (
+                <div className="embla__slide" key={alt}>
+                  <img src={src} alt={alt} className="embla__slide__image" />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
 
-      <button
-        className="carousel-button carousel-left"
-        type="button"
-        onClick={onPrevButtonClick}
-        disabled={prevBtnDisabled}
-      ></button>
-      <button
-        className="carousel-button carousel-right"
-        type="button"
-        onClick={onNextButtonClick}
-        disabled={nextBtnDisabled}
-      ></button>
-    </div>
+        <button
+          className="carousel-button carousel-left"
+          type="button"
+          onClick={onPrevButtonClick}
+          disabled={prevBtnDisabled}
+        ></button>
+        <button
+          className="carousel-button carousel-right"
+          type="button"
+          onClick={onNextButtonClick}
+          disabled={nextBtnDisabled}
+        ></button>
+      </div>
+    </>
   );
 };

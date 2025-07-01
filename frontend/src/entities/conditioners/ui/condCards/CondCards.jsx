@@ -12,6 +12,7 @@ export const CondCards = () => {
 
   return (
     <>
+      <h2>Услуги</h2>
       <div>
         {card.length > 0 ? (
           <div>
