@@ -1,5 +1,4 @@
 import React from "react";
-import img from "assets/conditioners/condImg/cond.jpg";
 import { useCondTypes } from "../../helpers/CondHelpers";
 
 export const CondTypes = () => {
@@ -23,8 +22,6 @@ export const CondTypes = () => {
             ))}
           </ul>
         }
-
-        <img width="50px" src={img} alt="" />
       </div>
     </>
   );

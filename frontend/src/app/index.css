@@ -16,11 +16,14 @@
   align-items: center;
   width: 90vw;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 h2 {
   align-self: start;
-  margin: 5vh 0;
+  text-transform: uppercase;
+
+  margin: 6vh 0;
   font-size: 2rem;
 }
 

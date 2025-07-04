@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import img from "assets/conditioners/condImg/cond.jpg";
+import "./style.css";
 import { useCondServices } from "../../helpers/CondHelpers";
 
 export const CondCards = () => {
@@ -14,19 +14,17 @@ export const CondCards = () => {
     <>
       <h2>Услуги</h2>
       <div>
-        {card.length > 0 ? (
-          <div>
+        {card.length > 0 && (
+          <div className="cards">
             {card.map((item) => (
-              <div key={item._id}>
-                <Link to={`/conditioners/${item._id}`}>
-                  {item.title}
-                  <img width="50px" src={img} alt="" />
+              <div className="card" key={item._id}>
+                <Link className="cardsLink" to={`/conditioners/${item._id}`}>
+                  <div className="cardsTitle">{item.title}</div>
+                  <img width="50px" src={item.image} alt="" />
                 </Link>
               </div>
             ))}
           </div>
-        ) : (
-          <p>Нет услуг</p>
         )}
       </div>
     </>
