@@ -14,7 +14,7 @@ export const ConditionersPage = () => {
       <TextAboutUs />
       <CondCards />
       <CondCarousel />
-      <CondFullPrice />
+      <CondFullPrice isShort />
       <Contacts />
     </>
   );

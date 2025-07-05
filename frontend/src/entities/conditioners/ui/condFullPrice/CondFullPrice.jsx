@@ -1,41 +1,47 @@
 import { useCondServices } from "entities/conditioners/helpers/CondHelpers";
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
+import "./style.css";
 
-export const CondFullPrice = () => {
-  const servicesData = useCondServices();
-  const location = useLocation();
-  const currentPath = location.pathname;
+const MAX_SERVICES = 6;
 
-  if (!servicesData) {
+export const CondFullPrice = ({ isShort }) => {
+  const services = useCondServices();
+
+  if (!services) {
     return <div>Загрузка...</div>;
   }
 
-  const services = servicesData.slice(0, 6);
+  let shortServices = services;
+
+  if (isShort && services.length > MAX_SERVICES) {
+    shortServices = services.slice(0, MAX_SERVICES);
+  }
 
   return (
     <>
-      <h2>Прайс</h2>
-      <div>
-        <table border="1">
-          {services.map((service) => (
+      {isShort && <h2>Прайс</h2>}
+      <div className="price">
+        <table>
+          {shortServices.map((service) => (
             <tbody key={service._id}>
               <tr>
-                <td colSpan="2">{service.title}</td>
+                <th colSpan="2">{service.title}</th>
               </tr>
-              {service.types.length > 0
-                ? service.types.map((type) => (
-                    <tr key={type._id}>
-                      <td>{type.title}</td>
-                      <td>{type.price}</td>
-                    </tr>
-                  ))
-                : null}
+              {service.types.length > 0 &&
+                service.types.map((type) => (
+                  <tr key={type._id}>
+                    <td>{type.title}:</td>
+                    <td>{type.price}</td>
+                  </tr>
+                ))}
             </tbody>
           ))}
         </table>
-        {currentPath === "/conditioners" && (
-          <Link to={"/conditioners/price"}>посмотреть весь прайс</Link>
+        {isShort && (
+          <Link className="priceLink" to={"/conditioners/price"}>
+            посмотреть весь прайс
+          </Link>
         )}
       </div>
     </>

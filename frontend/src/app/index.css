@@ -28,15 +28,20 @@ h2 {
 }
 
 .header,
+.footer,
+.header a,
+.footer a {
+  color: white;
+}
+
+.header,
 .footer {
   background-color: #000033;
-  color: white;
   font-size: 0.8rem;
 }
 
 .header a,
 .footer a {
-  color: white;
   text-decoration: none;
   font-size: 1.2rem;
 }

@@ -1,0 +1,49 @@
+.price {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+table {
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 51, 0.6);
+  border-collapse: collapse;
+}
+
+table tr:nth-child(1) {
+  background-color: #d5e9fd;
+}
+
+table tr:nth-child(2) {
+  background-color: #deeeff;
+}
+
+table td,
+table th {
+  padding: 1.6vh;
+  text-align: left;
+  border-bottom: 2px solid rgba(0, 0, 51, 0.3);
+}
+
+table th {
+  text-transform: uppercase;
+  font-size: 1.05rem;
+}
+
+table td {
+  font-size: 1.2rem;
+}
+
+.priceLink {
+  display: inline-block;
+  margin: 2vh 2vw 0 0;
+  text-decoration: none;
+  color: black;
+  font-size: 1.3rem;
+  margin-left: auto;
+}
+
+.priceLink:hover {
+  font-weight: bold;
+}
