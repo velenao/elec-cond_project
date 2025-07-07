@@ -1,12 +1,12 @@
 import React from "react";
 import "./style.css";
 
-export const Contacts = () => {
+export const Contacts = ({ main }) => {
   return (
     <>
-      <h2>Контакты</h2>
+      {main && <h2>Контакты</h2>}
       <div className="contacts">
-        <div>
+        <div className="contactsItem">
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -22,7 +22,7 @@ export const Contacts = () => {
           </div>
           г. Хабаровск и пригород
         </div>
-        <div>
+        <div className="contactsItem">
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +38,7 @@ export const Contacts = () => {
           </div>
           +7-994-130-24-30
         </div>
-        <div>
+        <div className="contactsItem">
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +53,7 @@ export const Contacts = () => {
           </div>
           44-30-24
         </div>
-        <div>
+        <div className="contactsItem">
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"

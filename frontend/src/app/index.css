@@ -14,15 +14,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90vw;
+  width: 85vw;
   margin: 0 auto;
   overflow-x: hidden;
+  min-height: 80vh;
+  padding-bottom: 5vh;
 }
 
 h2 {
   align-self: start;
   text-transform: uppercase;
-
   margin: 6vh 0;
   font-size: 2rem;
 }

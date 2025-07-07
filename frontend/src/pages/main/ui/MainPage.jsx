@@ -14,8 +14,12 @@ export const MainPage = () => {
     <>
       <div className="main_page">
         <div className="main_title">
-          Профессиональный монтаж и сервисное обслуживание кондиционеров и
-          электрики
+          <p className="textTitle">
+            <span>
+              Профессиональный монтаж и сервисное обслуживание кондиционеров и
+              электрики
+            </span>
+          </p>
         </div>
         <div className="main_link">
           <a className="link" href="/electric">
@@ -23,6 +27,7 @@ export const MainPage = () => {
               className="main_video"
               id="video_electric"
               ref={vidRefElec}
+              src={videoCond}
               loop
               muted
             ></video>

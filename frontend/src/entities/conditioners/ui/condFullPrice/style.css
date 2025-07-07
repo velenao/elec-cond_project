@@ -1,5 +1,5 @@
 .price {
-  width: 70%;
+  width: 45%;
   display: flex;
   flex-direction: column;
 }
@@ -7,23 +7,33 @@
 table {
   width: 100%;
   border-radius: 10px;
-  border: 2px solid rgba(0, 0, 51, 0.6);
+  box-shadow: 1px 2px 36px 1px rgba(0, 0, 51, 0.1);
   border-collapse: collapse;
 }
 
 table tr:nth-child(1) {
-  background-color: #d5e9fd;
+  background-color: #d7e9fc;
 }
 
 table tr:nth-child(2) {
-  background-color: #deeeff;
+  background-color: #dbebfc;
 }
 
 table td,
 table th {
   padding: 1.6vh;
   text-align: left;
-  border-bottom: 2px solid rgba(0, 0, 51, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 51, 0.15);
+}
+
+table tr:hover {
+  background-color: #cfe4fa;
+  border-color: rgba(0, 0, 51, 0.15);
+}
+
+table tr {
+  border: 1px solid transparent;
+  transition: background-color 0.5s ease, border-color 0.3s ease;
 }
 
 table th {
@@ -42,8 +52,9 @@ table td {
   color: black;
   font-size: 1.3rem;
   margin-left: auto;
+  transition: transform 0.3s ease;
 }
 
 .priceLink:hover {
-  font-weight: bold;
+  transform: scale(1.05);
 }

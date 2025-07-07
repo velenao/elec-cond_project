@@ -15,7 +15,7 @@ export const ConditionersPage = () => {
       <CondCards />
       <CondCarousel />
       <CondFullPrice isShort />
-      <Contacts />
+      <Contacts main />
     </>
   );
 };

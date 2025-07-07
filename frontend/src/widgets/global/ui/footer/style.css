@@ -5,17 +5,24 @@
   height: 15vh;
 }
 
-.footer .nav ul {
+.footer .nav ul,
+.footer .contacts {
   display: grid;
-  grid-template-columns: 50% 50%;
   row-gap: 2vh;
+}
+
+.footer .nav ul {
+  grid-template-columns: repeat(3, 1fr);
   column-gap: 3vw;
 }
 
 .footer .contacts {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  row-gap: 2vh;
+  grid-template-columns: repeat(2, 1fr);
   column-gap: 6vw;
   font-size: 1.2rem;
+}
+
+.footer .contacts svg {
+  width: 1.2rem;
+  height: 1.2rem;
 }
