@@ -1,27 +1,42 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useCondTypes } from "../../helpers/CondHelpers";
+import usePlayVideo from "pages/helpers/helpers";
 
 export const CondTypes = () => {
   const type = useCondTypes();
+  const vidRef = useRef(null);
 
-  if (!type) {
+  usePlayVideo(type && type.video ? vidRef : null);
+
+  if (!type || !type.video) {
     return <div>Загрузка...</div>;
   }
+
   return (
     <>
-      <div>
-        <h2>
-          {type.title}: {type.description}{" "}
-        </h2>
-        {
-          <ul>
-            {type.types.map((item) => (
-              <li key={item._id}>
-                {item.title}: {item.price}
-              </li>
-            ))}
-          </ul>
-        }
+      <div className="imgCondType">
+        {type.images.map((item, i) => (
+          <img key={i} src={item} alt="" />
+        ))}
+      </div>
+      <div className="contentCondType">
+        <h2>{type.title}:</h2>
+        <p>{type.description}</p>
+
+        <h3>Стоимость:</h3>
+        <table>
+          {type.types.map((item) => (
+            <tbody key={item._id}>
+              <tr>
+                <td>{item.title}:</td>
+                <td>{item.price}</td>
+              </tr>
+            </tbody>
+          ))}
+        </table>
+        <div className="video_services">
+          <video ref={vidRef} src={type.video} loop muted></video>
+        </div>
       </div>
     </>
   );

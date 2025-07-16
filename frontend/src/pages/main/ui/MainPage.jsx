@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import "./style.css";
-import usePlayVideo from "../helpers/helpers";
+import usePlayVideo from "../../helpers/helpers";
 import videoCond from "assets/conditioners/condVideo/cond.mp4";
 
 export const MainPage = () => {

@@ -1,0 +1,15 @@
+.fullPrice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 5vh;
+}
+
+.fullPrice h2 {
+  font-size: 2.5rem;
+  width: 45%;
+  margin-top: 1vh;
+  text-transform: none;
+  align-self: center;
+}

@@ -20,7 +20,7 @@ export const CondCards = () => {
               <div className="card" key={item._id}>
                 <Link className="cardsLink" to={`/conditioners/${item._id}`}>
                   <div className="cardsTitle">{item.title}</div>
-                  <img width="50px" src={item.image} alt="" />
+                  <img width="50px" src={item.poster} alt="" />
                 </Link>
               </div>
             ))}
