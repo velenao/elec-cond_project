@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
 
-import electricRouter from "./routes/electric.js";
+import elecRouter from "./routes/electricRoutes/electric.js";
 import condRouter from "./routes/conditionersRoutes/conditioners.js";
 
 dotenv.config();
@@ -22,7 +22,7 @@ app.use(cors());
 app.use(express.json());
 /***********************************/
 
-app.use("/api/electric", electricRouter);
+app.use("/api/electric", elecRouter);
 app.use("/api/conditioners", condRouter);
 
 app.get("/", (req, res) => {
