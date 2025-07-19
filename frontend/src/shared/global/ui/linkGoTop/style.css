@@ -1,0 +1,52 @@
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutDown {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+.linkGoTop {
+  font-size: 5rem;
+  position: fixed;
+  text-decoration: none;
+  color: white;
+  bottom: 16vh;
+  right: 0.5vw;
+  background-color: #000033;
+  border-radius: 3vw;
+  padding: 0.5vh 0.5vw;
+  opacity: 0;
+}
+
+.showLink {
+  animation-name: fadeInUp;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  transition: transform 0.3s ease, box-shadow 0.5s ease;
+}
+
+.hideLink {
+  animation-name: fadeOutDown;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.showLink:hover {
+  box-shadow: 1px -1px 15px 7px rgba(0, 0, 51, 0.2);
+  transform: scale(1.1);
+}

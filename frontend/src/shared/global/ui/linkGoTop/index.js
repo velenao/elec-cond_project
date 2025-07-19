@@ -1,0 +1,1 @@
+export { LinkGoTop } from "./LinkGoTop";

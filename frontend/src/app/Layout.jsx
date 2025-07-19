@@ -3,6 +3,7 @@ import { useLocation } from "react-router";
 
 import { Header } from "../widgets/global/ui/header";
 import { Footer } from "../widgets/global/ui/footer/Footer";
+import { LinkGoTop } from "shared/global/ui/linkGoTop";
 
 export const Layout = ({ children }) => {
   const location = useLocation();
@@ -15,6 +16,7 @@ export const Layout = ({ children }) => {
           <>
             <Header />
             <div className="contentContainer">{children}</div>
+            <LinkGoTop />
             {currentPath !== "/conditioners" && currentPath !== "/electric" && (
               <Footer />
             )}

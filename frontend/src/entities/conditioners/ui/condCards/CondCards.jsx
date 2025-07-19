@@ -12,7 +12,7 @@ export const CondCards = () => {
 
   return (
     <>
-      <h2>Услуги</h2>
+      <h2 id="condServices">Услуги</h2>
       <div>
         {card.length > 0 && (
           <div className="cards">

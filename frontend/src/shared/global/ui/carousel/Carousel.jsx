@@ -44,7 +44,6 @@ export const Carousel = ({ imgCarousel }) => {
 
   return (
     <>
-      <h2>Работы</h2>
       <div className="carousel-container">
         <div className="embla">
           <div className="embla__viewport" ref={emblaRef}>

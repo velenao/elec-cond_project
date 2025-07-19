@@ -12,7 +12,7 @@ export const ElecCards = () => {
 
   return (
     <>
-      <h2>Услуги</h2>
+      <h2 id="elecServices">Услуги</h2>
       <div>
         {card.length > 0 && (
           <div className="cards">

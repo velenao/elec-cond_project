@@ -8,10 +8,10 @@ export const TextAboutUs = () => {
 
   return (
     <>
-      <h2>Немного о нас</h2>
       <div className="textAboutUs">
         {currentLocation === "/electric" && (
           <>
+            <h2 id="elecTextAboutUs">Немного о нас</h2>
             <h3>Занимаемся электромонтажными работами уже более 8 лет</h3>
 
             <p>
@@ -25,6 +25,7 @@ export const TextAboutUs = () => {
         )}
         {currentLocation === "/conditioners" && (
           <>
+            <h2 id="condTextAboutUs">Немного о нас</h2>
             <h3>
               Занимаемся установкой и обслуживанием кондиционеров уже более 6
               лет

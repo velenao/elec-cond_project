@@ -20,7 +20,7 @@ export const CondFullPrice = ({ isShort }) => {
 
   return (
     <>
-      {isShort && <h2>Прайс</h2>}
+      {isShort && <h2 id="condPrice">Прайс</h2>}
       <div className="price">
         <table>
           {shortServices.map((service) => (

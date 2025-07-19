@@ -4,7 +4,7 @@ import "./style.css";
 export const Contacts = ({ main }) => {
   return (
     <>
-      {main && <h2>Контакты</h2>}
+      {main && <h2 id="contacts">Контакты</h2>}
       <div className="contacts">
         <div className="contactsItem">
           <div>

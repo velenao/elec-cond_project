@@ -3,5 +3,10 @@ import React from "react";
 import { Carousel } from "shared/global/ui/carousel";
 
 export const ElecCarousel = () => {
-  return <Carousel imgCarousel={elecImgCarousel} />;
+  return (
+    <>
+      <h2 id="elecCarousel">Работы</h2>
+      <Carousel imgCarousel={elecImgCarousel} />
+    </>
+  );
 };
