@@ -1,52 +1,52 @@
-@keyframes fadeInUp {
+@keyframes Up {
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    margin-bottom: 1vh;
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    margin-bottom: 0;
   }
 }
 
-@keyframes fadeOutDown {
+@keyframes Down {
   0% {
     opacity: 1;
-    transform: translateY(0);
+    margin-bottom: 0;
   }
   100% {
     opacity: 0;
-    transform: translateY(20px);
+    margin-bottom: 1vh;
   }
 }
 
 .linkGoTop {
-  font-size: 5rem;
+  font-size: 4rem;
   position: fixed;
   text-decoration: none;
   color: white;
-  bottom: 16vh;
-  right: 0.5vw;
+  bottom: 18vh;
+  right: 2vw;
   background-color: #000033;
-  border-radius: 3vw;
-  padding: 0.5vh 0.5vw;
   opacity: 0;
+  border-radius: 3vw;
+  padding: 1.5vh 0.5vw;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .showLink {
-  animation-name: fadeInUp;
+  animation-name: Up;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
-  transition: transform 0.3s ease, box-shadow 0.5s ease;
 }
 
 .hideLink {
-  animation-name: fadeOutDown;
+  animation-name: Down;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
 }
 
-.showLink:hover {
+.linkGoTop:hover {
   box-shadow: 1px -1px 15px 7px rgba(0, 0, 51, 0.2);
   transform: scale(1.1);
 }

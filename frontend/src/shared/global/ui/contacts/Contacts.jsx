@@ -1,10 +1,11 @@
 import React from "react";
 import "./style.css";
 
-export const Contacts = ({ main }) => {
+export const Contacts = ({ main, page }) => {
   return (
     <>
       {main && <h2 id="contacts">Контакты</h2>}
+
       <div className="contacts">
         <div className="contactsItem">
           <div>

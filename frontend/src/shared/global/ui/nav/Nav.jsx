@@ -1,7 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router";
-import { Link } from "react-router";
-import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 import { globalLinks } from "../../data/globalLinks";
 
 export const Nav = () => {
@@ -11,39 +10,33 @@ export const Nav = () => {
   return (
     <>
       <div className="nav">
-        <ul>
+        <nav>
           <Link to={globalLinks.firstItem.link}>
             {globalLinks.firstItem.text}
           </Link>
           {globalLinks.mainItems.map((item, index) => (
-            <li key={index}>
-              <HashLink
-                to={
-                  currentPath.includes("/electric")
-                    ? item.linkElectric
-                    : item.linkConditioners
-                }
-                smooth
-              >
-                {item.text}
-              </HashLink>
-            </li>
+            <Link
+              key={index}
+              to={
+                currentPath.includes("/electric")
+                  ? item.linkElectric
+                  : item.linkConditioners
+              }
+            >
+              {item.text}
+            </Link>
           ))}
           {currentPath.startsWith("/electric") && (
-            <li>
-              <Link to={globalLinks.lastItem[1].link}>
-                {globalLinks.lastItem[1].text}
-              </Link>
-            </li>
+            <Link to={globalLinks.lastItem[1].link}>
+              {globalLinks.lastItem[1].text}
+            </Link>
           )}
           {currentPath.startsWith("/conditioners") && (
-            <li>
-              <Link to={globalLinks.lastItem[0].link}>
-                {globalLinks.lastItem[0].text}
-              </Link>
-            </li>
+            <Link to={globalLinks.lastItem[0].link}>
+              {globalLinks.lastItem[0].text}
+            </Link>
           )}
-        </ul>
+        </nav>
       </div>
     </>
   );

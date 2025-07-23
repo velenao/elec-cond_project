@@ -15,11 +15,20 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="electric" element={<ElectricPage />} />
-        <Route path="electric/:id" element={<ElectricPageCard />} />
-        <Route path="electric/price" element={<ElectricFullPrice />} />
+        <Route path="electric/:id" element={<ElectricPageCard top={true} />} />
+        <Route
+          path="electric/price"
+          element={<ElectricFullPrice top={true} />}
+        />
         <Route path="conditioners" element={<ConditionersPage />} />
-        <Route path="conditioners/:id" element={<ConditionersPageCard />} />
-        <Route path="conditioners/price" element={<ConditionersFullPrice />} />
+        <Route
+          path="conditioners/:id"
+          element={<ConditionersPageCard top={true} />}
+        />
+        <Route
+          path="conditioners/price"
+          element={<ConditionersFullPrice top={true} />}
+        />
       </Routes>
     </Layout>
   );

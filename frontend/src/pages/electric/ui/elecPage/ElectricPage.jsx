@@ -6,8 +6,10 @@ import { ElecCards } from "entities/electric/ui/elecCards";
 import { ElecCarousel } from "widgets/electric/ui/elecCarousel";
 import { ElecFullPrice } from "entities/electric/ui/elecFullPrice";
 import { Contacts } from "shared/global/ui/contacts/Contacts";
+import { useScrollTo } from "pages/helpers/helpers";
 
 export const ElectricPage = () => {
+  useScrollTo();
   return (
     <>
       <ImgHeader />

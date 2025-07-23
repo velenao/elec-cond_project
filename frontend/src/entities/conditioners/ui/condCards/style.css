@@ -10,7 +10,7 @@
   position: relative;
   width: 15vw;
   height: 50vh;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
 
 .cards img {
@@ -43,5 +43,9 @@
 }
 
 .card:hover .cardsTitle {
-  transform: translate(-5px) scale(1.05);
+  transform: translate(-1vh) scale(1.05);
+}
+
+.card:hover {
+  transform: translateY(-1.5vh);
 }
