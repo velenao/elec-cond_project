@@ -1,7 +1,7 @@
-import image1 from "assets/conditioners/condImg/cond.jpg";
-import image2 from "assets/electric/elecImg/elec.jpg";
-import image3 from "assets/electric/elecImg/socket.jpg";
-import image4 from "assets/electric/elecImg/elec.jpg";
+import image1 from "assets/electric/elecImg/elecImg.jpg";
+import image2 from "assets/electric/elecImg/elecImg.jpg";
+import image3 from "assets/electric/elecImg/elecImg.jpg";
+import image4 from "assets/electric/elecImg/elecImg.jpg";
 
 export const elecImgCarousel = [
   { src: image1, alt: "Image 1" },

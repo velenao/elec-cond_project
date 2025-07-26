@@ -40,10 +40,14 @@
   left: -20%;
   transition: transform 0.2s ease;
   overflow-wrap: anywhere;
+  padding: 0.5vw 0.5vh;
+  background-color: rgba(221, 238, 255, 0.6);
+  border-radius: 0.5vw;
 }
 
 .card:hover .cardsTitle {
   transform: translate(-1vh) scale(1.05);
+  text-shadow: -5px 1px 35px rgba(221, 238, 255, 1);
 }
 
 .card:hover {

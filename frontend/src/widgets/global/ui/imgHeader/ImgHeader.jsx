@@ -2,8 +2,8 @@ import React from "react";
 import "./style.css";
 import { useLocation } from "react-router";
 
-import socket from "assets/electric/elecImg/socket.jpg";
-import cond from "assets/conditioners/condImg/cond.jpg";
+import socket from "assets/electric/elecImg/elecImg.jpg";
+import cond from "assets/conditioners/condImg/condImg.jpg";
 
 export const ImgHeader = () => {
   const location = useLocation();

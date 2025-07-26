@@ -29,7 +29,7 @@ export const CondTypes = () => {
             <tbody key={item._id}>
               <tr>
                 <td>{item.title}:</td>
-                <td>{item.price}</td>
+                <td>{item.price}Ъ</td>
               </tr>
             </tbody>
           ))}
