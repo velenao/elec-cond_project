@@ -1,7 +1,8 @@
 import React, { useRef } from "react";
 import "./style.css";
 import usePlayVideo from "../../helpers/helpers";
-import videoCond from "assets/conditioners/condVideo/condVideo.mp4";
+import condVideo from "assets/conditioners/condVideo/condVideo.mp4";
+import elecVideo from "assets/electric/elecVideo/elecVideo.mp4";
 
 export const MainPage = () => {
   const vidRefElec = useRef(null);
@@ -27,7 +28,7 @@ export const MainPage = () => {
               className="main_video"
               id="video_conditioners"
               ref={vidRefCond}
-              src={videoCond}
+              src={condVideo}
               loop
               muted
             ></video>
@@ -37,7 +38,7 @@ export const MainPage = () => {
               className="main_video"
               id="video_electric"
               ref={vidRefElec}
-              src={videoCond}
+              src={elecVideo}
               loop
               muted
             ></video>

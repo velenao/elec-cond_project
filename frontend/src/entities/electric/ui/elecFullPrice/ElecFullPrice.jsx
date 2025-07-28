@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
 
-const MAX_SERVICES = 6;
+const MAX_SERVICES = 3;
 
 export const ElecFullPrice = ({ isShort }) => {
   const services = useElecServices();
