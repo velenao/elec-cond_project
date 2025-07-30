@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import "./style.css";
-import usePlayVideo from "../../helpers/helpers";
+import usePlayVideo from "shared/global/helpers/helpers";
 import condVideo from "assets/conditioners/condVideo/condVideo.mp4";
 import elecVideo from "assets/electric/elecVideo/elecVideo.mp4";
 

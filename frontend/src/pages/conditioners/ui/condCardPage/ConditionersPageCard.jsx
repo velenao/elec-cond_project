@@ -12,9 +12,7 @@ export const ConditionersPageCard = ({ top }) => {
         <Link className="backLink" to={"/conditioners#condServices"}>
           Назад
         </Link>
-        <div className="condTypes">
-          <CondTypes />
-        </div>
+        <CondTypes />
       </div>
     </>
   );

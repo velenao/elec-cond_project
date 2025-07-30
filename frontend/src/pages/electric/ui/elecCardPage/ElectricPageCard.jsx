@@ -12,9 +12,7 @@ export const ElectricPageCard = ({ top }) => {
         <Link className="backLink" to={"/electric#elecServices"}>
           Назад
         </Link>
-        <div className="elecTypes">
-          <ElecTypes />
-        </div>
+        <ElecTypes />
       </div>
     </>
   );
