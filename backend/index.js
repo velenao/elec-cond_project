@@ -25,10 +25,6 @@ app.use(express.json());
 app.use("/api/electric", elecRouter);
 app.use("/api/conditioners", condRouter);
 
-app.get("/", (req, res) => {
-  res.json({ mess: "kkkk" });
-});
-
 async function startServer() {
   try {
     await mongoose.connect(

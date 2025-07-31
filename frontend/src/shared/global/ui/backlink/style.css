@@ -1,0 +1,16 @@
+.backLink {
+  font-size: 1.2rem;
+  background-color: #000033;
+  border-radius: 6vw;
+  padding: 2vh 3vw;
+  text-decoration: none;
+  color: white;
+  margin-top: 2vh;
+  align-self: start;
+  transition: transform 0.3s ease, box-shadow 0.4s ease;
+}
+
+.backLink:hover {
+  box-shadow: 1px -1px 15px 7px rgba(0, 0, 51, 0.2);
+  transform: scale(1.03);
+}
