@@ -1,3 +1,11 @@
+:root {
+  --dark-blue-color: #000033;
+  --light-blue-color: #ddedfc;
+  --light-blue-shadow: -3px 1px 47px 1px rgba(221, 237, 252, 0.4);
+  --dark-blue-shadow: 1px -1px 15px 7px rgba(0, 0, 51, 0.2);
+  --border-radius: 10px;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,7 +18,7 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
-  background-color: #ddeeff;
+  background-color: var(--light-blue-color);
   margin: 0 auto;
 }
 
@@ -41,7 +49,7 @@ h2 {
 
 .header,
 .footer {
-  background-color: #000033;
+  background-color: var(--dark-blue-color);
   font-size: 0.8rem;
 }
 
@@ -55,5 +63,5 @@ h2 {
 .header a:hover,
 .footer a:hover {
   transform: scale(1.05);
-  text-shadow: -5px 1px 35px rgba(221, 238, 255, 1);
+  text-shadow: -5px 1px 35px var(--light-blue-color);
 }

@@ -23,7 +23,7 @@
 }
 
 .main_video {
-  border-radius: 1vw;
+  border-radius: var(--border-radius);
   width: 30vw;
   height: 65vh;
   object-fit: cover;
@@ -31,7 +31,7 @@
 }
 
 .main_video:hover {
-  box-shadow: -3px 1px 47px 1px rgba(221, 238, 255, 0.4);
+  box-shadow: var(--light-blue-shadow);
 }
 
 .main_page {

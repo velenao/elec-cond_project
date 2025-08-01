@@ -27,7 +27,7 @@
   color: white;
   bottom: 18vh;
   right: 2vw;
-  background-color: #000033;
+  background-color: var(--dark-blue-color);
   opacity: 0;
   border-radius: 3vw;
   padding: 1.5vh 0.5vw;
@@ -47,6 +47,6 @@
 }
 
 .linkGoTop:hover {
-  box-shadow: 1px -1px 15px 7px rgba(0, 0, 51, 0.2);
+  box-shadow: var(--dark-blue-shadow);
   transform: scale(1.1);
 }
