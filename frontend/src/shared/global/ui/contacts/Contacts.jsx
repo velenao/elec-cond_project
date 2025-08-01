@@ -1,12 +1,12 @@
 import React from "react";
 import "./style.css";
 
-export const Contacts = ({ main, page }) => {
+export const Contacts = ({ main }) => {
   return (
     <>
       {main && <h2 id="contacts">Контакты</h2>}
 
-      <div className="contacts">
+      <div className={main ? "mainContacts" : "contacts"}>
         <div className="contactsItem">
           <div>
             <svg

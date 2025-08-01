@@ -1,5 +1,4 @@
 import React from "react";
-import "./style.css";
 import { ImgHeader } from "widgets/global/ui/imgHeader";
 import { TextAboutUs } from "widgets/global/ui/textAboutUs";
 import { CondCards } from "entities/conditioners/ui/condCards";

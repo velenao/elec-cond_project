@@ -7,7 +7,7 @@
   opacity: 0;
 }
 
-.main_link {
+.start_link {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
@@ -22,7 +22,7 @@
   width: 100%;
 }
 
-.main_video {
+.start_video {
   border-radius: var(--border-radius);
   width: 30vw;
   height: 65vh;
@@ -30,11 +30,11 @@
   transition: box-shadow 0.5s ease;
 }
 
-.main_video:hover {
+.start_video:hover {
   box-shadow: var(--light-blue-shadow);
 }
 
-.main_page {
+.start_page {
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -45,7 +45,7 @@
   color: white;
 }
 
-.main_title {
+.start_title {
   width: 60%;
 }
 

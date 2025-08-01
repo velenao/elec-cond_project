@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router";
 
 import { Layout } from "app/Layout";
-import { MainPage } from "pages/main/ui";
+import { StartPage } from "pages/start/ui";
 import { ElectricPage } from "pages/electric/ui/elecPage";
 import { ElectricPageCard } from "pages/electric/ui/elecCardPage";
 import { ElectricFullPrice } from "pages/electric/ui/elecFullPrice";
@@ -13,7 +13,7 @@ function App() {
   return (
     <Layout>
       <Routes>
-        <Route path="/" element={<MainPage />} />
+        <Route path="/" element={<StartPage />} />
         <Route path="electric" element={<ElectricPage />} />
         <Route path="electric/:id" element={<ElectricPageCard top={true} />} />
         <Route

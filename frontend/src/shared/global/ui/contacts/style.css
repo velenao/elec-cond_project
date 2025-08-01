@@ -1,5 +1,19 @@
-.contacts div {
+.contacts div,
+.mainContacts div {
   display: flex;
   align-items: center;
   gap: 2vw;
+}
+
+.mainContacts {
+  font-size: 1.7rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 6vh;
+  column-gap: 15vw;
+}
+
+.mainContacts svg {
+  width: 1.7rem;
+  height: 1.7rem;
 }

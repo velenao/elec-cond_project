@@ -14,10 +14,6 @@ table tr:nth-child(1) {
   background-color: #d7e9fc;
 }
 
-table tr:nth-child(2) {
-  background-color: #dbebfc;
-}
-
 table td,
 table th {
   padding: 1.6vh;

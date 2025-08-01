@@ -4,7 +4,7 @@ import usePlayVideo from "shared/global/helpers/helpers";
 import condVideo from "assets/conditioners/condVideo/condVideo.mp4";
 import elecVideo from "assets/electric/elecVideo/elecVideo.mp4";
 
-export const MainPage = () => {
+export const StartPage = () => {
   const vidRefElec = useRef(null);
   const vidRefCond = useRef(null);
 
@@ -13,8 +13,8 @@ export const MainPage = () => {
 
   return (
     <>
-      <div className="main_page">
-        <div className="main_title">
+      <div className="start_page">
+        <div className="start_title">
           <p className="textTitle">
             <span>
               Профессиональный монтаж и сервисное обслуживание кондиционеров и
@@ -22,10 +22,10 @@ export const MainPage = () => {
             </span>
           </p>
         </div>
-        <div className="main_link">
+        <div className="start_link">
           <a className="link" href="/conditioners">
             <video
-              className="main_video"
+              className="start_video"
               id="video_conditioners"
               ref={vidRefCond}
               src={condVideo}
@@ -35,7 +35,7 @@ export const MainPage = () => {
           </a>
           <a className="link" href="/electric">
             <video
-              className="main_video"
+              className="start_video"
               id="video_electric"
               ref={vidRefElec}
               src={elecVideo}
