@@ -41,7 +41,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   gap: 4vh;
-  background-color: #000033;
+  background-color: var(--dark-blue-color);
   color: white;
 }
 

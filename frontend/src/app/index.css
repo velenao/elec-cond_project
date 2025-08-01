@@ -1,7 +1,7 @@
 :root {
   --dark-blue-color: #000033;
-  --light-blue-color: #ddedfc;
-  --light-blue-shadow: -3px 1px 47px 1px rgba(221, 237, 252, 0.4);
+  --light-blue-color: #e1effc;
+  --light-blue-shadow: -3px 1px 47px 1px rgba(225, 239, 252, 0.4);
   --dark-blue-shadow: 1px -1px 15px 7px rgba(0, 0, 51, 0.2);
   --border-radius: 10px;
 }
