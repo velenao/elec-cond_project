@@ -11,7 +11,7 @@ dotenv.config();
 const app = express();
 
 /*************importantConst*************/
-const PORT = process.env.PORT;
+const PORT_SERVER = process.env.PORT_SERVER;
 const DB_USER = process.env.DB_USER;
 const DB_PASSWORD = process.env.DB_PASSWORD;
 const DB_NAME = process.env.DB_NAME;
@@ -28,10 +28,14 @@ app.use("/api/conditioners", condRouter);
 async function startServer() {
   try {
     await mongoose.connect(
-      `mongodb://${DB_USER}:${DB_PASSWORD}@127.0.0.1:27017/${DB_NAME}?directConnection=true&serverSelectionTimeoutMS=2000`
+      `mongodb://${DB_USER}:${DB_PASSWORD}@database:27017/${DB_NAME}`,
+      {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      }
     );
 
-    app.listen(PORT, () => console.log("server started"));
+    app.listen(PORT_SERVER, () => console.log("server started"));
   } catch (error) {
     console.log("error");
   }

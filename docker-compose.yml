@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  backend:
+    container_name: elec-cond_backend
+    build: ./backend
+    ports:
+      - "8080:3469"
+    env_file:
+      - ./.env
+    depends_on:
+      - database
+
+  frontend:
+    container_name: elec-cond_frontend
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./.env
+    environment:
+      SRC_ALIAS: ./src
+    depends_on:
+      - backend
+
+  database:
+    image: mongo
+    container_name: elec-cond_database
+    env_file:
+      - ./.env
+    volumes:
+      - mongodata:/data/db
+      - ./bd:/dump
+      - ./init.sh:/docker-entrypoint-initdb.d/init.sh
+    ports:
+      - "27017:27017"
+
+volumes:
+  mongodata:
